@@ -70,15 +70,15 @@ mysqli_close($conn); // Fechando a conexão do banco
      $email->isSMTP();
      $email->SMTPAuth = true;
      $email->Host = 'smtp.gmail.com';
-     $email->Username = 'tcchostphpmail@gmail.com'; // Email para autentificação do protocolo STMP
-     $email->Password = 'ggxufhhgpihatdeb'; // senha de APP
+     $email->Username = ''; // Email para autentificação do protocolo STMP
+     $email->Password = ''; // senha de APP
      $email->SMTPSecure = 'tls';
      $email->Port = '587'; // Porta do Servidor SMTP (tls => 587 / ssl => 465)
 
      // Configuração de Envio
 
      $email->isHTML();
-     $email->SetFrom('tcchostphpmail@gmail.com', 'Marco_Antonio');
+     $email->SetFrom('', 'Marco_Antonio');
      $email->Subject = $userEmail;
      $email->Body = '<p>Aqui esta seu link para resetar sua senha: </br>
      </br><a href="' . $url . '">' . $url . '</a></p>';
